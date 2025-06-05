@@ -157,23 +157,23 @@ const About = () => {
           <div className="space-y-6">
             <div className="prose prose-lg max-w-none text-gray-600">
               <p className="text-xl leading-relaxed mb-6">
-                Hi there! I&#39;m a passionate full-stack developer with a love for creating digital solutions that make a real difference. 
+                Hi there! I&apos;m a passionate full-stack developer with a love for creating digital solutions that make a real difference. 
                 My journey in technology began during my Computer Science studies, where I discovered the incredible power of code to transform ideas into reality.
               </p>
               
               <p className="text-lg leading-relaxed mb-6">
                 What started as curiosity about how websites work evolved into a deep passion for building scalable, user-centric applications. 
-                I've had the privilege of working on diverse projects - from healthcare platforms that improve patient care to e-commerce solutions that drive business growth.
+                I&apos;ve had the privilege of working on diverse projects - from healthcare platforms that improve patient care to e-commerce solutions that drive business growth.
               </p>
               
               <p className="text-lg leading-relaxed">
-                Today, as an Associate Software Developer at DevEntia Tech, I'm focused on microservices architecture and cloud solutions, 
-                constantly pushing the boundaries of what's possible with modern web technologies. I believe in writing code that not only works but tells a story of thoughtful engineering.
+                Today, as an Associate Software Developer at DevEntia Tech, I&apos;m focused on microservices architecture and cloud solutions, 
+                constantly pushing the boundaries of what&apos;s possible with modern web technologies. I believe in writing code that not only works but tells a story of thoughtful engineering.
               </p>
             </div>
             
             <div className="grid md:grid-cols-2 gap-6 mt-8">
-              {achievements.map((achievement, index) => (
+              {achievements.map((achievement) => (
                 <div
                   key={achievement.title}
                   className={`p-6 rounded-2xl bg-gradient-to-br ${achievement.color} border border-gray-200 hover:shadow-lg transition-all duration-300`}
@@ -195,18 +195,18 @@ const About = () => {
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional Timeline</h3>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                From academic excellence to professional growth, here's how my journey in technology has evolved.
+                From academic excellence to professional growth, here&apos;s how my journey in technology has evolved.
               </p>
             </div>
             
             <div className="relative">
-              {timeline.map((item, index) => (
-                <div key={index} className="flex items-start space-x-4 pb-8 last:pb-0">
+              {timeline.map((item, timelineIndex) => (
+                <div key={timelineIndex} className="flex items-start space-x-4 pb-8 last:pb-0">
                   <div className="flex flex-col items-center">
                     <div className={`w-12 h-12 ${item.color} rounded-full flex items-center justify-center text-white text-xl font-bold z-10`}>
                       <span>{item.icon}</span>
                     </div>
-                    {index !== timeline.length - 1 && (
+                    {timelineIndex !== timeline.length - 1 && (
                       <div className="w-0.5 h-16 bg-gray-300 mt-2"></div>
                     )}
                   </div>
@@ -258,12 +258,12 @@ const About = () => {
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Tech Interests</h3>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Technologies and domains that excite me and areas where I'm continuously expanding my expertise.
+                Technologies and domains that excite me and areas where I&apos;m continuously expanding my expertise.
               </p>
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {interests.map((interest, index) => (
+              {interests.map((interest) => (
                 <div
                   key={interest.name}
                   className="group p-4 bg-white rounded-xl border border-gray-200 hover:border-indigo-300 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center"
@@ -282,7 +282,7 @@ const About = () => {
               <div className="text-center">
                 <h4 className="text-xl font-semibold text-gray-900 mb-4">Always Learning</h4>
                 <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                  Technology never stops evolving, and neither do I. I'm constantly exploring new frameworks, 
+                  Technology never stops evolving, and neither do I. I&apos;m constantly exploring new frameworks, 
                   methodologies, and best practices to stay at the forefront of software development.
                 </p>
                 <div className="flex justify-center space-x-4">
@@ -350,9 +350,9 @@ const About = () => {
         {/* Call to Action */}
         <div className={`text-center mt-16 transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-8 border border-indigo-200">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Let's Create Something Amazing Together</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Let&apos;s Create Something Amazing Together</h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              I'm always excited to work on new projects and collaborate with fellow developers and innovators.
+              I&apos;m always excited to work on new projects and collaborate with fellow developers and innovators.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

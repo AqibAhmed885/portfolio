@@ -19,7 +19,7 @@ export default function HomePage() {
       setCurrentRole((prev) => (prev + 1) % roles.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [roles.length]); // Added missing dependency
 
   const skills = [
     { name: "React", icon: "⚛️" },
@@ -252,11 +252,11 @@ export default function HomePage() {
           
           {/* Main Content */}
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            
+
             {/* Greeting */}
             <div className="mb-6">
               <span className="inline-block px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-sm font-medium text-indigo-600 border border-indigo-200 animate-fade-in">
-                👋 Hello, I'm a Software Developer
+                👋 Hello, I&apos;m a Software Developer
               </span>
             </div>
 
@@ -280,7 +280,7 @@ export default function HomePage() {
             {/* Dynamic Role */}
             <div className="mb-8 h-16 flex items-center justify-center">
               <p className="text-xl sm:text-2xl lg:text-3xl text-gray-600 font-light">
-                I'm an{' '}
+                I&apos;m an{' '}
                 <span className="font-bold text-indigo-600 inline-block min-w-[340px] text-left">
                   <span 
                     key={currentRole}
@@ -294,7 +294,7 @@ export default function HomePage() {
 
             {/* Description */}
             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed">
-              Currently working as an <span className="font-semibold text-indigo-600">Senior Full Stack Developer at Webrange Solutioins</span>, 
+              Currently working as an <span className="font-semibold text-indigo-600">Senior Full Stack Developer at Webrange Solutions</span>, 
               building scalable applications with <span className="font-semibold text-purple-600">MERN stack</span>. 
               <span className="font-semibold text-yellow-600">Gold Medalist</span> CS graduate with <span className="font-semibold text-green-600">3.58 CGPA</span>, experienced in developing 
               <span className="font-semibold text-blue-600"> enterprise-level solutions</span> and 
@@ -317,7 +317,7 @@ export default function HomePage() {
                 href="#contact"
                 className="group inline-flex items-center px-8 py-4 bg-white/80 backdrop-blur-sm text-gray-800 font-semibold rounded-full border-2 border-gray-200 hover:border-indigo-300 hover:bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-lg"
               >
-                Let's Connect
+                Let&apos;s Connect
                 <svg className="ml-2 w-5 h-5 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                 </svg>
@@ -550,6 +550,7 @@ export default function HomePage() {
                 </div>
               </div>
             ))}
+
           </div>
 
           <div className="text-center mt-12">

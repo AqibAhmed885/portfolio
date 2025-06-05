@@ -86,7 +86,7 @@ const Contact = () => {
       title: 'LinkedIn',
       value: 'Connect with me',
       href: 'https://linkedin.com/in/yourprofile',
-      description: 'Let\'s connect professionally',
+      description: 'Let&apos;s connect professionally',
       color: 'from-blue-50 to-blue-100',
       iconBg: 'bg-blue-200',
       hoverColor: 'hover:bg-blue-50'
@@ -148,7 +148,7 @@ const Contact = () => {
     },
     {
       question: 'What is your development process?',
-      answer: 'I follow an Agile approach with regular check-ins, wireframing, development iterations, testing, and deployment. You\'ll be involved throughout the process.'
+      answer: 'I follow an Agile approach with regular check-ins, wireframing, development iterations, testing, and deployment. You&apos;ll be involved throughout the process.'
     }
   ];
 
@@ -162,11 +162,11 @@ const Contact = () => {
         {/* Header */}
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Let's Work Together
+            Let&apos;s Work Together
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to bring your ideas to life? I'm here to help you build amazing digital solutions.
-            Let's discuss your project and create something extraordinary together.
+            Ready to bring your ideas to life? I&apos;m here to help you build amazing digital solutions.
+            Let&apos;s discuss your project and create something extraordinary together.
           </p>
         </div>
 
@@ -294,7 +294,7 @@ const Contact = () => {
                       <svg className="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
-                      <span className="text-green-800 font-medium">Message sent successfully! I'll get back to you soon.</span>
+                      <span className="text-green-800 font-medium">Message sent successfully! I&apos;ll get back to you soon.</span>
                     </div>
                   </div>
                 )}
@@ -320,7 +320,7 @@ const Contact = () => {
             <div>
               <h3 className="text-xl font-bold text-gray-900 mb-6">Get in touch</h3>
               <div className="space-y-4">
-                {contactMethods.map((method, index) => (
+                {contactMethods.map((method) => (
                   <a
                     key={method.title}
                     href={method.href}
@@ -350,7 +350,7 @@ const Contact = () => {
                 <h3 className="font-semibold text-green-800">Available for New Projects</h3>
               </div>
               <p className="text-green-700 text-sm mb-4">
-                I'm currently accepting new projects and would love to help bring your ideas to life.
+                I&apos;m currently accepting new projects and would love to help bring your ideas to life.
               </p>
               <div className="space-y-2 text-sm text-green-600">
                 <div className="flex items-center space-x-2">
@@ -372,8 +372,8 @@ const Contact = () => {
             <div>
               <h3 className="text-xl font-bold text-gray-900 mb-6">Quick FAQ</h3>
               <div className="space-y-4">
-                {faqs.slice(0, 2).map((faq, index) => (
-                  <div key={index} className="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                {faqs.slice(0, 2).map((faq, faqIndex) => (
+                  <div key={faqIndex} className="bg-gray-50 rounded-lg p-4 border border-gray-200">
                     <h4 className="font-semibold text-gray-900 mb-2 text-sm">{faq.question}</h4>
                     <p className="text-gray-600 text-xs">{faq.answer}</p>
                   </div>
@@ -388,8 +388,8 @@ const Contact = () => {
           <div className="bg-gradient-to-r from-indigo-900 to-purple-900 rounded-2xl p-12 text-white">
             <h3 className="text-3xl font-bold mb-4">Ready to Start Your Project?</h3>
             <p className="text-indigo-200 mb-8 max-w-2xl mx-auto text-lg">
-              Let's discuss your requirements and create a roadmap for your success. 
-              From concept to deployment, I'll be with you every step of the way.
+              Let&apos;s discuss your requirements and create a roadmap for your success. 
+              From concept to deployment, I&apos;ll be with you every step of the way.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
