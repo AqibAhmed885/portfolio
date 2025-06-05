@@ -34,7 +34,7 @@ export default function HomePage() {
 
   const stats = [
     { number: "6+", label: "Projects Completed" },
-    { number: "11", label: "Months MERN Experience" },
+    { number: "3+", label: "Years Experience" },
     { number: "15+", label: "Technologies Mastered" },
     { number: "🥇", label: "Gold Medalist" }
   ];
@@ -253,7 +253,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen mt-16 flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+      <section id="home" className="relative min-h-screen pt-24 pb-10 flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
@@ -272,7 +272,7 @@ export default function HomePage() {
             </div>
 
             {/* Name & Title */}
-            <h1 className="flex text-4xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
               <span className="block mb-2">Building Modern</span>
               <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 bg-clip-text text-transparent animate-gradient">
                 Solutions
@@ -292,7 +292,7 @@ export default function HomePage() {
             <div className="mb-8 h-16 flex items-center justify-center">
               <p className="text-xl sm:text-2xl lg:text-3xl text-gray-600 font-light">
                 I&apos;m an{' '}
-                <span className="font-bold text-indigo-600 inline-block min-w-[340px] text-left">
+                <span className="font-bold text-indigo-600 inline-block min-w-[340px] sm:text-center">
                   <span 
                     key={currentRole}
                     className="animate-fade-in-up"
@@ -378,14 +378,14 @@ export default function HomePage() {
           </div>
 
           {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
             <a href="#education" className="flex flex-col items-center text-gray-400 hover:text-indigo-600 transition-colors duration-300">
               <span className="text-sm mb-2">Scroll Down</span>
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>
             </a>
-          </div>
+          </div> */}
         </div>
       </section>
 

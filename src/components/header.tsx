@@ -29,13 +29,13 @@ const Header: React.FC = () => {
   return (
     <>
       <header 
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-out animate-slide-down ${
-          isScrolled 
-            ? 'bg-white/98 backdrop-blur-xl border-b border-black/10 shadow-lg shadow-black/5' 
-            : 'bg-white/95 backdrop-blur-2xl border-b border-white/20'
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-out animate-slide-down `}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:rounded-b-full lg:shadow-lg lg:px-8 ${
+          isScrolled 
+            ? ' backdrop-blur-xl border-b border-black/10 shadow-lg shadow-black/5' 
+            : '  backdrop-blur-2xl border-b border-white/20'
+        }`}>
           <div className="flex items-center justify-between h-16 md:h-20">
             
             {/* Logo */}
