@@ -275,3 +275,50 @@ body {
 .hover-glow:hover {
   box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);
 }
+
+/* Marquee Animations */
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee-right {
+  animation: marquee-right 20s linear infinite;
+}
+
+.animate-marquee-left {
+  animation: marquee-left 20s linear infinite;
+}
+
+/* Pause animation on hover */
+.animate-marquee-right:hover,
+.animate-marquee-left:hover {
+  animation-play-state: paused;
+}
+
+/* Alternative: Single row marquee */
+@keyframes marquee-single {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee-single {
+  animation: marquee-single 30s linear infinite;
+}

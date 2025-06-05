@@ -440,32 +440,59 @@ export default function HomePage() {
               </a>
             </div>
 
-            {/* Tech Stack Icons */}
+            {/* Tech Stack Icons with Marquee Effect */}
             <div className="mb-16">
               <p className="text-sm text-gray-500 mb-6 uppercase tracking-wider font-medium">
                 Core Technologies
               </p>
-              <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
-                {skills.map((skill, index) => (
-                  <div
-                    key={skill.name}
-                    className="group flex flex-col items-center p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-200 hover:border-indigo-300 hover:shadow-lg hover:-translate-y-2 transition-all duration-300 cursor-pointer animate-fade-in-up"
-                    style={{ animationDelay: `${index * 100}ms` }}
-                  >
-                    <div className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-300">
-                      <Image
-                        src={skill.icon}
-                        alt={skill.name}
-                        width={40}
-                        height={40}
-                        className="w-10 h-10"
-                      />
+              
+              {/* Marquee Container */}
+              <div className="relative overflow-hidden">
+                {/* First Row - Moving Right */}
+                <div className="flex animate-marquee-right whitespace-nowrap">
+                  {[...skills, ...skills].map((skill, index) => (
+                    <div
+                      key={`right-${index}`}
+                      className="group flex flex-col items-center p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-200 hover:border-indigo-300 hover:shadow-lg transition-all duration-300 cursor-pointer mx-3 flex-shrink-0"
+                    >
+                      <div className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-300">
+                        <Image
+                          src={skill.icon}
+                          alt={skill.name}
+                          width={40}
+                          height={40}
+                          className="w-10 h-10"
+                        />
+                      </div>
+                      <span className="text-sm font-medium text-gray-700 group-hover:text-indigo-600 transition-colors duration-300">
+                        {skill.name}
+                      </span>
                     </div>
-                    <span className="text-sm font-medium text-gray-700 group-hover:text-indigo-600 transition-colors duration-300">
-                      {skill.name}
-                    </span>
-                  </div>
-                ))}
+                  ))}
+                </div>
+                
+                {/* Second Row - Moving Left */}
+                <div className="flex animate-marquee-left whitespace-nowrap mt-4">
+                  {[...skills.slice().reverse(), ...skills.slice().reverse()].map((skill, index) => (
+                    <div
+                      key={`left-${index}`}
+                      className="group flex flex-col items-center p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-200 hover:border-indigo-300 hover:shadow-lg transition-all duration-300 cursor-pointer mx-3 flex-shrink-0"
+                    >
+                      <div className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-300">
+                        <Image
+                          src={skill.icon}
+                          alt={skill.name}
+                          width={40}
+                          height={40}
+                          className="w-10 h-10"
+                        />
+                      </div>
+                      <span className="text-sm font-medium text-gray-700 group-hover:text-indigo-600 transition-colors duration-300">
+                        {skill.name}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
