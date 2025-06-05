@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useRef, useEffect } from 'react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -63,6 +64,19 @@ const Contact = () => {
   };
 
   const contactMethods = [
+    //add whatsapp number
+    {
+      icon: (
+       <FaWhatsapp className="w-6 h-6 "  />
+      ),
+      title: 'WhatsApp',
+      value: '+92 316 1887004',
+      href: 'https://wa.me/923161887004',
+      description: 'Message me on WhatsApp for quick responses',
+      color: 'from-green-50 to-emerald-50',
+      iconBg: 'bg-green-100',
+      hoverColor: 'hover:bg-green-50'
+    },
     {
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -70,7 +84,7 @@ const Contact = () => {
         </svg>
       ),
       title: 'Email',
-      value: 'your.email@example.com',
+      value: 'aqibahmed885@gmail.com',
       href: 'mailto:your.email@example.com',
       description: 'Send me an email for any inquiries',
       color: 'from-blue-50 to-indigo-50',
@@ -85,8 +99,8 @@ const Contact = () => {
       ),
       title: 'LinkedIn',
       value: 'Connect with me',
-      href: 'https://linkedin.com/in/yourprofile',
-      description: 'Let&apos;s connect professionally',
+      href: 'www.linkedin.com/in/aqib-ahmed885',
+      description: 'Lets connect professionally',
       color: 'from-blue-50 to-blue-100',
       iconBg: 'bg-blue-200',
       hoverColor: 'hover:bg-blue-50'
@@ -99,7 +113,7 @@ const Contact = () => {
       ),
       title: 'GitHub',
       value: 'View my code',
-      href: 'https://github.com/yourusername',
+      href: 'https://github.com/AqibAhmed885',
       description: 'Check out my latest projects',
       color: 'from-gray-50 to-gray-100',
       iconBg: 'bg-gray-200',
