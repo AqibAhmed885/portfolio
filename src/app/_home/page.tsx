@@ -197,9 +197,22 @@ export default function HomePage() {
 
   const experience = [
     {
+      company: "Webrange Solutions",
+      position: "Full Stack Developer",
+      duration: "May 2025 – Present",
+      type: "Full Time",
+      location: "Remote",
+      highlights: [
+        "Building comprehensive admin panels using Next.js and TypeScript",
+        "Implementing Supabase backend integration for real-time data management",
+        "Developing responsive websites with modern UI/UX principles",
+        "Managing full-stack architecture and database design"
+      ]
+    },
+    {
       company: "DevEntia Tech",
       position: "Associate Software Developer",
-      duration: "Nov 2024 – Present",
+      duration: "Nov 2024 – Apr 2025",
       type: "Full Time",
       location: "Islamabad",
       highlights: [
@@ -248,9 +261,7 @@ export default function HomePage() {
           <div className="absolute top-40 left-40 w-80 h-80 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
         </div>
 
-        <div className="relative z-10  mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          
-          {/* Main Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
 
             {/* Greeting */}
@@ -292,10 +303,10 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* Description */}
+            {/* Updated Description */}
             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed">
-              Currently working as an <span className="font-semibold text-indigo-600">Senior Full Stack Developer at Webrange Solutions</span>, 
-              building scalable applications with <span className="font-semibold text-purple-600">MERN stack</span>. 
+              Currently working as a <span className="font-semibold text-indigo-600">Full Stack Developer at Webrange Solutions</span>, 
+              building <span className="font-semibold text-purple-600">Next.js admin panels</span> with <span className="font-semibold text-green-600">Supabase integration</span>. 
               <span className="font-semibold text-yellow-600">Gold Medalist</span> CS graduate with <span className="font-semibold text-green-600">3.58 CGPA</span>, experienced in developing 
               <span className="font-semibold text-blue-600"> enterprise-level solutions</span> and 
               <span className="font-semibold text-orange-600"> modern web applications</span>.
@@ -567,7 +578,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Experience Section */}
+      {/* Enhanced Experience Section */}
       <section id="experience" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -575,7 +586,7 @@ export default function HomePage() {
               Professional Journey
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Building expertise through hands-on experience in modern web development and cloud technologies
+              Building expertise through hands-on experience in modern web development, admin panels, and cloud technologies
             </p>
           </div>
 
@@ -583,17 +594,29 @@ export default function HomePage() {
             {experience.map((exp, index) => (
               <div
                 key={exp.company}
-                className="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-all duration-300 animate-fade-in-up"
+                className={`bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-all duration-300 animate-fade-in-up ${
+                  index === 0 ? 'ring-2 ring-indigo-500 ring-opacity-20' : ''
+                }`}
                 style={{ animationDelay: `${index * 200}ms` }}
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900">{exp.position}</h3>
+                    <div className="flex items-center space-x-3 mb-2">
+                      <h3 className="text-2xl font-bold text-gray-900">{exp.position}</h3>
+                      {index === 0 && (
+                        <span className="inline-flex items-center px-2 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">
+                          <div className="w-2 h-2 bg-green-400 rounded-full mr-1 animate-pulse"></div>
+                          Current
+                        </span>
+                      )}
+                    </div>
                     <p className="text-indigo-600 font-semibold text-lg">{exp.company}</p>
                     <p className="text-gray-600">{exp.location}</p>
                   </div>
                   <div className="mt-4 md:mt-0 md:text-right">
-                    <span className="inline-block px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium mb-2">
+                    <span className={`inline-block px-3 py-1 ${
+                      exp.type === 'Full Time' ? 'bg-indigo-100 text-indigo-800' : 'bg-purple-100 text-purple-800'
+                    } rounded-full text-sm font-medium mb-2`}>
                       {exp.type}
                     </span>
                     <p className="text-gray-600 font-medium">{exp.duration}</p>
@@ -603,11 +626,33 @@ export default function HomePage() {
                 <div className="grid md:grid-cols-2 gap-4">
                   {exp.highlights.map((highlight, idx) => (
                     <div key={idx} className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-indigo-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <div className={`w-2 h-2 ${
+                        index === 0 ? 'bg-green-600' : 'bg-indigo-600'
+                      } rounded-full mt-2 flex-shrink-0`}></div>
                       <span className="text-gray-700">{highlight}</span>
                     </div>
                   ))}
                 </div>
+
+                {/* Current role additional info */}
+                {index === 0 && (
+                  <div className="mt-6 pt-6 border-t border-gray-200">
+                    <div className="flex flex-wrap gap-3">
+                      <span className="px-3 py-1 bg-blue-50 text-blue-700 text-sm font-medium rounded-full border border-blue-200">
+                        Next.js
+                      </span>
+                      <span className="px-3 py-1 bg-green-50 text-green-700 text-sm font-medium rounded-full border border-green-200">
+                        Supabase
+                      </span>
+                      <span className="px-3 py-1 bg-purple-50 text-purple-700 text-sm font-medium rounded-full border border-purple-200">
+                        Admin Panels
+                      </span>
+                      <span className="px-3 py-1 bg-orange-50 text-orange-700 text-sm font-medium rounded-full border border-orange-200">
+                        TypeScript
+                      </span>
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
